@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 	    :length   => { :maximum => 50 }
   validates :email, :presence => true,
 	    :format   => { :with => email_regex },
-	    :uniqueness => true
+	    :uniqueness => { :case_sensitive => false }
 
   # Automatically create the virtual attribute 'password_confirmation'.
   validates :password, :presence     => true,

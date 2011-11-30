@@ -1,0 +1,312 @@
+loading autotest/rails_rspec2
+
+
+--------------------------------------------------------------------------------
+
+[2J[f/usr/local/bin/ruby -rrubygems -S /usr/local/lib/ruby/gems/1.9.1/gems/rspec-core-2.7.1/exe/rspec --tty '/home/administrator/rails/sample_app/spec/controllers/pages_controller_spec.rb' '/home/administrator/rails/sample_app/spec/controllers/sessions_controller_spec.rb' '/home/administrator/rails/sample_app/spec/controllers/users_controller_spec.rb' '/home/administrator/rails/sample_app/spec/models/user_spec.rb' '/home/administrator/rails/sample_app/spec/requests/friendly_forwardings_spec.rb' '/home/administrator/rails/sample_app/spec/requests/layout_links_spec.rb' '/home/administrator/rails/sample_app/spec/requests/users_spec.rb'
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Failures:
+
+  1) SessionsController GET 'new' should have the right title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title", :content => "Sign in")[0m
+       [31mexpected following output to contain a <title>Sign in</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[36m     # ./spec/controllers/sessions_controller_spec.rb:12:in `block (3 levels) in <top (required)>'[0m
+
+  2) SessionsController POST 'create' invalid signin should have the right title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title", :content => "Sign in")[0m
+       [31mexpected following output to contain a <title>Sign in</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[36m     # ./spec/controllers/sessions_controller_spec.rb:31:in `block (4 levels) in <top (required)>'[0m
+
+  3) UsersController GET 'index' for signed-in users should paginate users
+     [31mFailure/Error:[0m [31mresponse.should have_selector("a", :href => "/users?page=2",[0m
+       [31mexpected following output to contain a <a href='/users?page=2'>2</a> tag:[0m
+       [31m<!DOCTYPE html>[0m
+       [31m<html>[0m
+       [31m<head>[0m
+       [31m<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">[0m
+       [31m<title>Ruby on Rails Tutorial Sample App | All users</title>[0m
+       [31m<!--[if lt IE 9]>[0m
+       [31m<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[0m
+       [31m<![endif]--><link href="/assets/blueprint/screen.css" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m<link href="/assets/blueprint/print.css" media="print" rel="stylesheet" type="text/css">[0m
+       [31m<!--[if lt IE 8]><link href="/assets/blueprint/ie.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="/assets/custom.css" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m<script src="/assets/application.js" type="text/javascript"></script>[0m
+       [31m</head>[0m
+       [31m<body>[0m
+       [31m    <div class="container">[0m
+       [31m      <header><img alt="Sample App" class="round" src="/assets/logo.png"><nav class="round"><ul>[0m
+       [31m<li><a href="/">Home</a></li>[0m
+       [31m			<li><a href="/users">Users</a></li>[0m
+       [31m      <li><a href="/users/1">Profile</a></li>[0m
+       [31m			<li><a href="/users/1/edit">Settings</a></li>[0m
+       [31m      <li><a href="/help">Help</a></li>[0m
+       [31m      <li><a href="/signout" data-method="delete" rel="nofollow">Sign out</a></li>[0m
+       [31m    </ul></nav></header><section class="round"><h1>All users</h1>[0m
+       [31m[0m
+       [31m<div class="pagination">[0m
+       [31m<span class="previous_page disabled">&#8592; Previous</span> <em>1</em> <a rel="next" href="/users?escape=false&amp;page=2">2</a> <a class="next_page" rel="next" href="/users?escape=false&amp;page=2">Next &#8594;</a>[0m
+       [31m</div>[0m
+       [31m[0m
+       [31m<ul class="users">[0m
+       [31m<li>[0m
+       [31m  <img alt="Michael Hartl" class="gravatar" src="http://gravatar.com/avatar/1fda4469bcbec3badf5418269ffc5968?size=30"><a href="/users/1">Michael Hartl</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Bob" class="gravatar" src="http://gravatar.com/avatar/86a7c65390f83bdee8c4455af823b7cb?size=30"><a href="/users/2">Bob</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Ben" class="gravatar" src="http://gravatar.com/avatar/dd5bff939e78bbc5051efa1a3ff1dcb0?size=30"><a href="/users/3">Ben</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 91" class="gravatar" src="http://gravatar.com/avatar/e44c38aa36bffeebb9f59e50de846fb4?size=30"><a href="/users/4">Person 91</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 92" class="gravatar" src="http://gravatar.com/avatar/125d2f777f0f266ff3fc5e9f79b9b8b7?size=30"><a href="/users/5">Person 92</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 93" class="gravatar" src="http://gravatar.com/avatar/95a3c1df8f70d065d5f6fe9c799840a9?size=30"><a href="/users/6">Person 93</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 94" class="gravatar" src="http://gravatar.com/avatar/f41b2a4e646e19853a4396c2d166a078?size=30"><a href="/users/7">Person 94</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 95" class="gravatar" src="http://gravatar.com/avatar/d31f91433afe441f0cf6ebc9a22aef8d?size=30"><a href="/users/8">Person 95</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 96" class="gravatar" src="http://gravatar.com/avatar/bb03861fb1123b3afd7e1bb29e9d0b05?size=30"><a href="/users/9">Person 96</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 97" class="gravatar" src="http://gravatar.com/avatar/c8267a1927445fe261d40a47f53b2ea6?size=30"><a href="/users/10">Person 97</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 98" class="gravatar" src="http://gravatar.com/avatar/2348e595e0b2331a9d06ed74b309f152?size=30"><a href="/users/11">Person 98</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 99" class="gravatar" src="http://gravatar.com/avatar/860b2e5e342f55faf0b414f36ab0c948?size=30"><a href="/users/12">Person 99</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 100" class="gravatar" src="http://gravatar.com/avatar/f4fc0e00abd378811cfa8140be1e1158?size=30"><a href="/users/13">Person 100</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 101" class="gravatar" src="http://gravatar.com/avatar/fbaf3882d8b938d6e492b7c62a18d3d0?size=30"><a href="/users/14">Person 101</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 102" class="gravatar" src="http://gravatar.com/avatar/e8c8e9d0376915d55a57fac08ba6e326?size=30"><a href="/users/15">Person 102</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 103" class="gravatar" src="http://gravatar.com/avatar/65bbf2cc13ab660f9cc879a1308c8a5b?size=30"><a href="/users/16">Person 103</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 104" class="gravatar" src="http://gravatar.com/avatar/dc892e842ff1fcc90f2e12e111905c70?size=30"><a href="/users/17">Person 104</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 105" class="gravatar" src="http://gravatar.com/avatar/350c624f4c471c0ea94fe24b3d02fded?size=30"><a href="/users/18">Person 105</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 106" class="gravatar" src="http://gravatar.com/avatar/4fac89057e3505e044fb8447ab49b0f0?size=30"><a href="/users/19">Person 106</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 107" class="gravatar" src="http://gravatar.com/avatar/4847c604feadda0992a7be0ed8e000c1?size=30"><a href="/users/20">Person 107</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 108" class="gravatar" src="http://gravatar.com/avatar/6063db6f5c1108362c76c5a8cd26f046?size=30"><a href="/users/21">Person 108</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 109" class="gravatar" src="http://gravatar.com/avatar/e4ea822898dad699a636c7efa0418be8?size=30"><a href="/users/22">Person 109</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 110" class="gravatar" src="http://gravatar.com/avatar/b0be0aebe8cd5972efda62e20e3921ea?size=30"><a href="/users/23">Person 110</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 111" class="gravatar" src="http://gravatar.com/avatar/3c51b46ac624056903eeae03e52b0c26?size=30"><a href="/users/24">Person 111</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 112" class="gravatar" src="http://gravatar.com/avatar/40dcd4dfe68e90cf43e34d3f07e5abd0?size=30"><a href="/users/25">Person 112</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 113" class="gravatar" src="http://gravatar.com/avatar/577e997028169041902deacb43614df2?size=30"><a href="/users/26">Person 113</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 114" class="gravatar" src="http://gravatar.com/avatar/811db3fdda06d362216f68a0980ee11d?size=30"><a href="/users/27">Person 114</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 115" class="gravatar" src="http://gravatar.com/avatar/b4c3b9d853242df89ab17ec671c4afe2?size=30"><a href="/users/28">Person 115</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 116" class="gravatar" src="http://gravatar.com/avatar/49a89d651bd578d6f3646d344c6ad096?size=30"><a href="/users/29">Person 116</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m<li>[0m
+       [31m  <img alt="Person 117" class="gravatar" src="http://gravatar.com/avatar/044d71640c5ed3504e65bb8f3bb2576c?size=30"><a href="/users/30">Person 117</a>[0m
+       [31m</li>[0m
+       [31m[0m
+       [31m[0m
+       [31m</ul>[0m
+       [31m<div class="pagination">[0m
+       [31m<span class="previous_page disabled">&#8592; Previous</span> <em>1</em> <a rel="next" href="/users?escape=false&amp;page=2">2</a> <a class="next_page" rel="next" href="/users?escape=false&amp;page=2">Next &#8594;</a>[0m
+       [31m</div>[0m
+       [31m[0m
+       [31m      </section><footer><nav class="round"><ul>[0m
+       [31m<li><a href="/about">About</a></li>[0m
+       [31m      <li><a href="/contact">Contact</a></li>[0m
+       [31m      <li><a href="http://news.railstutorial.org/">News</a></li>[0m
+       [31m      <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>[0m
+       [31m    </ul></nav></footer>[0m
+       [31m</div>[0m
+       [31m  </body>[0m
+       [31m</html>[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:51:in `block (4 levels) in <top (required)>'[0m
+
+  4) UsersController GET 'edit' should be successful
+     [31mFailure/Error:[0m [31mget :edit, :id => @user[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:167:in `block (3 levels) in <top (required)>'[0m
+
+  5) UsersController GET 'edit' should have the right title
+     [31mFailure/Error:[0m [31mget :edit, :id => @user[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:172:in `block (3 levels) in <top (required)>'[0m
+
+  6) UsersController GET 'edit' should have a link to change the Gravatar
+     [31mFailure/Error:[0m [31mget :edit, :id => @user[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:177:in `block (3 levels) in <top (required)>'[0m
+
+  7) UsersController PUT 'update' failure should render the 'edit' page
+     [31mFailure/Error:[0m [31mput :update, :id => @user, :user => @attr[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./app/controllers/users_controller.rb:45:in `update'[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:199:in `block (4 levels) in <top (required)>'[0m
+
+  8) UsersController PUT 'update' failure should have the right title
+     [31mFailure/Error:[0m [31mput :update, :id => @user, :user => @attr[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./app/controllers/users_controller.rb:45:in `update'[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:204:in `block (4 levels) in <top (required)>'[0m
+
+  9) UsersController DELETE 'destroy' as a non-signed-in user should deny access
+     [31mFailure/Error:[0m [31mdelete :destroy, :id => @user[0m
+     [31mNoMethodError:[0m
+       [31mundefined method `admin?' for nil:NilClass[0m
+[36m     # ./app/controllers/users_controller.rb:68:in `admin_user'[0m
+[36m     # ./spec/controllers/users_controller_spec.rb:281:in `block (4 levels) in <top (required)>'[0m
+
+  10) User should reject email addresses identical up to case
+     [31mFailure/Error:[0m [31muser_with_duplicate_email.should_not be_valid[0m
+       [31mexpected valid? to return false, got true[0m
+[36m     # ./spec/models/user_spec.rb:71:in `block (2 levels) in <top (required)>'[0m
+
+  11) FriendlyForwardings should forward to the requested page after signin
+     [31mFailure/Error:[0m [31mclick_button[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./spec/requests/friendly_forwardings_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 15.02 seconds
+[31m84 examples, 11 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/controllers/sessions_controller_spec.rb:10[0m [36m# SessionsController GET 'new' should have the right title[0m
+[31mrspec ./spec/controllers/sessions_controller_spec.rb:29[0m [36m# SessionsController POST 'create' invalid signin should have the right title[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:47[0m [36m# UsersController GET 'index' for signed-in users should paginate users[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:166[0m [36m# UsersController GET 'edit' should be successful[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:171[0m [36m# UsersController GET 'edit' should have the right title[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:176[0m [36m# UsersController GET 'edit' should have a link to change the Gravatar[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:198[0m [36m# UsersController PUT 'update' failure should render the 'edit' page[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:203[0m [36m# UsersController PUT 'update' failure should have the right title[0m
+[31mrspec ./spec/controllers/users_controller_spec.rb:280[0m [36m# UsersController DELETE 'destroy' as a non-signed-in user should deny access[0m
+[31mrspec ./spec/models/user_spec.rb:67[0m [36m# User should reject email addresses identical up to case[0m
+[31mrspec ./spec/requests/friendly_forwardings_spec.rb:5[0m [36m# FriendlyForwardings should forward to the requested page after signin[0m
+
+
+--------------------------------------------------------------------------------
+
+[2J[f/usr/local/bin/ruby -rrubygems -S /usr/local/lib/ruby/gems/1.9.1/gems/rspec-core-2.7.1/exe/rspec --tty '/home/administrator/rails/sample_app/spec/requests/friendly_forwardings_spec.rb'
+[31mF[0m
+
+Failures:
+
+  1) FriendlyForwardings should forward to the requested page after signin
+     [31mFailure/Error:[0m [31mclick_button[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./spec/requests/friendly_forwardings_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 13.59 seconds
+[31m1 example, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/requests/friendly_forwardings_spec.rb:5[0m [36m# FriendlyForwardings should forward to the requested page after signin[0m
+
+
+--------------------------------------------------------------------------------
+
+[2J[f/usr/local/bin/ruby -rrubygems -S /usr/local/lib/ruby/gems/1.9.1/gems/rspec-core-2.7.1/exe/rspec --tty '/home/administrator/rails/sample_app/spec/requests/friendly_forwardings_spec.rb'
+[31mF[0m
+
+Failures:
+
+  1) FriendlyForwardings should forward to the requested page after signin
+     [31mFailure/Error:[0m [31mclick_button[0m
+     [31mActionView::MissingTemplate:[0m
+       [31mMissing template users/edit, application/edit with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:[0m
+       [31m  * "/home/administrator/rails/sample_app/app/views"[0m
+[36m     # ./spec/requests/friendly_forwardings_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 15.82 seconds
+[31m1 example, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/requests/friendly_forwardings_spec.rb:5[0m [36m# FriendlyForwardings should forward to the requested page after signin[0m
+
+
+--------------------------------------------------------------------------------
+
+[2J[f/usr/local/bin/ruby -rrubygems -S /usr/local/lib/ruby/gems/1.9.1/gems/rspec-core-2.7.1/exe/rspec --tty '/home/administrator/rails/sample_app/spec/requests/friendly_forwardings_spec.rb'
+Interrupt a second time to quit

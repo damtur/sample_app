@@ -37,20 +37,20 @@ describe UsersController do
         response.should have_selector("title", :content => "All users")
       end
 
-			it "should have an element for each user" do
+      it "should have an element for each user" do
         get :index
         @users[0..2].each do |user|
           response.should have_selector("li", :content => user.name)
         end
       end
 
- 			it "should paginate users" do
+      it "should paginate users" do
         get :index
         response.should have_selector("div.pagination")
         response.should have_selector("span.disabled", :content => "Previous")
-        response.should have_selector("a", :href => "/users?page=2",
+        response.should have_selector("a", :href => "/users?escape=false&page=2",
                                            :content => "2")
-        response.should have_selector("a", :href => "/users?page=2",
+        response.should have_selector("a", :href => "/users?escape=false&page=2",
                                            :content => "Next")
       end
     end
@@ -96,7 +96,7 @@ describe UsersController do
 
     it "should have the right title" do
       get 'new'
-      response.should have_selector("title", :content => "Ruby on Rails Tutorial Sample App | Sign up")
+      response.should have_selector("title", :content => "Sign up")
     end
   end
 
@@ -251,7 +251,7 @@ describe UsersController do
       end
     end
 
-		describe "for signed-in users" do
+    describe "for signed-in users" do
 
       before(:each) do
         wrong_user = Factory(:user, :email => "user@example.net")
@@ -270,7 +270,7 @@ describe UsersController do
     end
   end
 
-	describe "DELETE 'destroy'" do
+  describe "DELETE 'destroy'" do
 
     before(:each) do
       @user = Factory(:user)
